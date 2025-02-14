@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on </title>
+    <link>http://localhost:1313/categories/nlp/</link>
+    <description>Recent content in NLP on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="http://localhost:1313/categories/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Machine Learning</title>
+      <link>http://localhost:1313/machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/machine-learning/</guid><media:content url="http://localhost:1313/machine-learning/feature_hu_9a482684c37df2d6.png" type="image/jpeg"/>
+        <description>
+          &lt;img src=&quot;http://localhost:1313/machine-learning/feature_hu_9a482684c37df2d6.png&quot; /&gt;
+          &lt;p&gt;This album showcases a collection of machine learning visualizations, focusing on Natural Language Processing (NLP) and Explainable AI (XAI).&lt;/p&gt;
+        </description></item>
+  </channel>
+</rss>
