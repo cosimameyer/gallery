@@ -7,6 +7,8 @@ featured: true
 resources:
   - src: ada_lovelace_small.png
     title: Ada Lovelace<br><br>✨ was a mathematician and the first computer programmer<br>✨ worked on early versions of a calculator (with Charles Babbage)<br>✨ imagined the machine following patterns and not only calculating numbers but also forming letters - the basic version of computer programming was described in the 1840s!<br>✨ and much more
+  - src: aishwarya_srinivasan_small.png
+    title: Aishwarya Srinivasan<br><br>✨ is Head of AI Developer Relations @ Fireworks AI and content creator<br>✨ makes complex data science topics accessible on social media<br>✨ founded Illuminate AI, a mentorship platform to connect people<br>✨ received multiple awards for her work<br>✨ and much more!
   - src: alison_hill_small.png
     title: Alison Presmanes Hill<br><br>✨ is a Director of Product at Anaconda, Inc., having previously worked at Voltron Data, Posit PBC, and IBM<br>✨ holds a PhD in Psychology from Vanderbilt University<br>✨ is an avid OSS contributor (from website themes to R packages to data 🐧)<br>✨ is a strong advocate for promoting gender diversity in the R community<br>✨ and much more
   - src: allison_horst_small.png
