@@ -71,6 +71,8 @@ resources:
     title: Reshama Shaikh<br><br>✨is a statistician/data scientist consultant and Director of Data Umbrella - a global community for underrepresented persons in data science that organizes online speaker series and workshops<br>✨ holds a  M.S. in statistics from Rutgers University and an M.B.A. from NYU Stern School of Business<br>✨ is a passionate open source contributor and advocate (for instance for scikit-learn and PyMC 🐍)<br>✨ was awarded the Community Leadership Award from NumFOCUS and is a Fellow of PSF<br>✨ and much more
   - src: sasha_luccioni_small.png
     title: Sasha Luccioni<br><br>✨ is a leading researcher in ethical artificial intelligence and AI and Climate Lead at Hugging Face<br>✨ is pioneering with her work and advocacy in the field of sustainable AI and ethical AI<br>✨ contributes to creating CodeCarbon, a light-weight Python package that helps to quantify the CO2 emissions produced during the training of AI algorithms<br>✨ and much more
+  - src: sophie_germain_small.png
+    title: Sophie Germain<br><br>✨ was a pinoneering mathematician, physicist, and philosopher<br>✨ broke gender barriers to study math & corresponded with Gauss under a pseudonym<br>✨ contributed to number theory & elasticity — foundations for cryptography & physics<br>✨ has Sophie Germain primes & a prize named after her<br>✨ and much more
   - src: susan_wojcicki_small.png
     title: Susan Wojcicki<br><br>✨ was CEO of YouTube<br>✨ held degrees in history and literature, economics, and an MBA<br>✨ played a key role in shaping Google's advertising business<br>✨ advocated for diversity in tech<br>✨ was recognized as a top media executive and influential leader<br>✨ and much more
   - src: timnit_gebru_small.png
