@@ -79,6 +79,10 @@ resources:
     title: Susan Wojcicki<br><br>✨ was CEO of YouTube<br>✨ held degrees in history and literature, economics, and an MBA<br>✨ played a key role in shaping Google's advertising business<br>✨ advocated for diversity in tech<br>✨ was recognized as a top media executive and influential leader<br>✨ and much more
   - src: timnit_gebru_small.png
     title: Timnit Gebru<br><br>✨ is a computer scientist as well as the founder and executive director of The Distributed AI Research Institute (DAIR)<br>✨ is pioneering with her work and advocacy in the field of ethical AI<br>✨ is co-founder of Black in AI<br>✨ and much more
-  - src: featured.png
+  - src: tulsee_doshi_small.png
+    title: Tulsee Doshi<br><br>✨ is Sr. Director & Head of Product for Gemini Model at DeepMind, leading Google’s frontier multimodal AI<br>✨ was listed as Forbes 30 Under 30 (2022) & Top 100 Women in AI Ethics (2019)<br>✨ is former Head of Product for Responsible AI & ML Fairness at Google<br>✨ mentors and speaks globally on building ethical & human-centered AI systems<br>✨ and much more
+  - src: xxx_featured.png
     title: Image with hexagon tiles featuring amazing women in tech.
+    params:
+      cover: true
 ---
