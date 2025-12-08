@@ -35,6 +35,8 @@ resources:
     title: Ellie King<br><br>✨ is co-founder of Equal IT where they support organizations to recruit inclusive teams globally<br>✨ hosts the EqualInspired podcast where she invites speakers to share empowering stories, career journeys, lessons learnt and advice to inspire others 🎙️<br>✨ is a frequent speaker at conferences and meetups, amplifying the voices of women and non-dominant groups<br>✨ and much more
   - src: erin_ledell_small.png
     title: Erin LeDell<br><br>✨is Chief Scientist at Distributional, driving AI strategy<br>✨ co-founded R-Ladies Global and founded WiMLDS to support diversity in tech<br>✨ holds a PhD in Biostatistics from UC Berkeley, specializing in scalable machine learning<br>✨ has keynoted at top conferences and contributes to open-source<br>✨ is a leader in advancing AutoML<br>✨ and much more
+  - src: faidra_patsatzi_small.png
+    title: Faidra A. Patsatzi<br><br>✨ is a Visiting Student Researcher in the Machine Intelligence in Medical Imaging research group at Stanford<br>✨ has a BSc (and soon MSc) in Electrical Engineering and Information Technology from TUM<br>✨ is an advocate for diversity in tech and has empowered more women in STEM as a board member of she.codes by TEC for two consecutive years<br>✨ and much more!
   - src: frances_allen_small.png
     title: Frances Allen <br><br>✨ was an IBM pioneer in high-performance and parallel computing<br>✨ was the first female IBM Fellow and first female Turing Award winner<br>✨ was a role model for women in tech and advocate for inclusion<br>✨ and much more!
   - src: frauke_kreuter_small.png
