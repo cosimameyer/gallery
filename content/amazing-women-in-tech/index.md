@@ -55,6 +55,8 @@ resources:
     title: Jacqueline Nolis<br><br>✨is the Principal Data Scientist at Fanatics<br>✨ has a track record of helping businesses solve problems with data<br>✨ has co-authored the book 'Build Your Career in Data Science' (with Emily Robinson), which gives you tons of fantastic tips on how to build a career in data science (and they also have a podcast on the topic)<br>✨ and much more
   - src: jessica_cherny_small.png
     title: Jessica Cherny<br><br>✨✨ is a Senior Data Analyst at Fivetran, founder of Data Angels, and speaker at tech events<br>✨ is actively involved in the Silicon Valley startup scene, including participation in Accel Partners' Accel Scholar program<br>✨ supports other women in data by bringing together a community with more than 2,400 members, organizing fireplace talks and mentoring sessions<br>✨ and much more
+  - src: joana_carrasqueira_small.png
+    title: Joana Carrasqueira<br><br>✨ is the Global Lead for Vibe Coding at Google DeepMind and former Head of Developer Relations<br>✨ has a Master's in Pharmaceutical Sciences<br>✨ empowers developers to build responsibly with Google AI<br>✨ is a strong advocate for responsible AI and ethics<br>✨ and much more!
   - src: joedian_reid_small.png
     title: Joedian Reid<br><br>✨is Technical Program Manager for Go at Google<br>✨ has a track record of helping businesses solve problems with technology<br>✨ is a frequent speaker on topics such as career development, women in tech, and tech in general<br>✨ is a strong advocate for promoting greater diversity in tech 💜<br>✨ and much more
   - src: katherine_johnson_small.png
