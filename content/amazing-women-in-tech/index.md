@@ -51,6 +51,8 @@ resources:
     title: Ida Rhodes<br><br>✨ was a pioneer in computer science (co-designed the C-10 programming language for the universal automatic computer I)<br>✨ developed an often-used algorithm for a Jewish calendar<br>✨ was referred to as the UNIVAC I Pioneer at the AFIPS National Computer Conference in Chicago<br>✨ and much more
   - src: jacqueline_nolis_small.png
     title: Jacqueline Nolis<br><br>✨is the Principal Data Scientist at Fanatics<br>✨ has a track record of helping businesses solve problems with data<br>✨ has co-authored the book 'Build Your Career in Data Science' (with Emily Robinson), which gives you tons of fantastic tips on how to build a career in data science (and they also have a podcast on the topic)<br>✨ and much more
+  - src: jana_schaich_borg_small.png
+    title: Jana Schaich Borg<br><br>✨ is an Associate Research Professor at Duke<br>✨ co-authored Moral AI and How We Get There, exploring how to build moral AI systems<br>✨ bridges neuroscience and AI to guide ethical tech design<br>✨ active leader in neuroethics and AI policy conversations<br>✨and much more
   - src: jessica_cherny_small.png
     title: Jessica Cherny<br><br>✨✨ is a Senior Data Analyst at Fivetran, founder of Data Angels, and speaker at tech events<br>✨ is actively involved in the Silicon Valley startup scene, including participation in Accel Partners' Accel Scholar program<br>✨ supports other women in data by bringing together a community with more than 2,400 members, organizing fireplace talks and mentoring sessions<br>✨ and much more
   - src: joedian_reid_small.png
