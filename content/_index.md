@@ -1,5 +1,5 @@
 ---
-description: This folder contains illustrations that I generated to explain concepts in machine learning, programming, and statistics as well as the "Amazing Women in Tech" project. I'm very happy if you find these resources useful. I created the illustrations to make (more or less) complex topics more understandable and you're more than welcome to use them by CC-BY license. Please attribute it by citing "Illustration by @cosima_meyer".<br> This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+description: Illustrations by Cosima Meyer — making machine learning, statistics, and the amazing women who shaped tech more visible. All illustrations are [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/); please credit "Illustration by @cosima_meyer".
 params:
   theme: dark
 title: Illustrations

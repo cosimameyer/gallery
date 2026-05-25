@@ -1,7 +1,7 @@
 ---
 menus: "main"
 categories: ["Women in Tech"]
-description: The illustrations are part of a larger project ("Amazing Women in Tech") in which I aim to make women more visible in the world of programming, statistics, and STEM in general. The illustrations are shared along with a short portrait on social media such as LinkedIn and Mastodon.
+description: 40+ illustrated portraits celebrating the women who shaped — and are shaping — programming, statistics, and STEM. Each portrait is shared with a short bio on LinkedIn and Mastodon as part of an ongoing effort to make women in tech more visible.
 title: Amazing Women in Tech
 featured: true
 womenBio: true
@@ -88,7 +88,7 @@ resources:
     title: Timnit Gebru<br><br>✨ is a computer scientist as well as the founder and executive director of The Distributed AI Research Institute (DAIR)<br>✨ is pioneering with her work and advocacy in the field of ethical AI<br>✨ is co-founder of Black in AI<br>✨ [and much more](https://en.wikipedia.org/wiki/Timnit_Gebru)
   - src: tulsee_doshi_small.png
     title: Tulsee Doshi<br><br>✨ is Sr. Director & Head of Product for Gemini Model at DeepMind, leading Google's frontier multimodal AI<br>✨ was listed as Forbes 30 Under 30 (2022) & Top 100 Women in AI Ethics (2019)<br>✨ is former Head of Product for Responsible AI & ML Fairness at Google<br>✨ mentors and speaks globally on building ethical & human-centered AI systems<br>✨ and much more
-  - src: xxx_featured.png
+  - src: cover.png
     title: Image with hexagon tiles featuring amazing women in tech.
     params:
       cover: true

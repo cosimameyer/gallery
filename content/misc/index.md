@@ -1,6 +1,6 @@
 ---
-title: More fun stuff
-description: This album showcases a collection of visualizations I created for various purposes.
+title: Community Art
+description: Illustrations celebrating the R, Python, and open-source communities — from R-Ladies and PyLadies to International Women's Day.
 resources:
   - src: rladies_bot.png
     title: Image showing a little R-Ladies super hero

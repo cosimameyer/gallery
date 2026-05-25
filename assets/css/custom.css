@@ -1,4 +1,133 @@
 /* ============================================================
+   Design tokens — aligned with cosimameyer.com 2026 refresh
+   ============================================================ */
+:root {
+  --c-bg:          #F5F7FF;
+  --c-heading:     #1D2B4E;
+  --c-body:        #3E4D78;
+  --c-muted:       #7A8BB2;
+  --c-accent:      #4D85EA;
+  --c-accent-dark: #2B62C8;
+  --c-border:      #CDD9F5;
+
+  --f-heading: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+  --f-body:    'Poppins', sans-serif;
+
+  --shadow-card: 0 8px 32px color-mix(in srgb, var(--c-accent) 14%, transparent);
+
+  /* Override gallery theme light-mode surface and text tokens */
+  --surface-1-light: var(--c-bg);
+  --text-1-light:    var(--c-heading);
+  --text-2-light:    var(--c-muted);
+  --border-light:    var(--c-border);
+}
+
+/* ---- Global typography ---- */
+body {
+  font-family: var(--f-body);
+  color: var(--c-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--f-heading);
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--c-accent);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+a:hover { color: var(--c-accent-dark); }
+
+/* ---- Header / site wordmark ---- */
+body > header {
+  background-color: color-mix(in srgb, var(--c-bg) 96%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--c-border);
+}
+
+body > header .btn {
+  font-family: var(--f-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--c-heading);
+}
+
+body > header .btn:hover { color: var(--c-accent); }
+
+/* ---- Mobile nav menu ---- */
+body > menu a {
+  font-family: var(--f-heading);
+  font-weight: 600;
+  color: var(--c-body);
+}
+body > menu a:hover,
+body > menu a[aria-current="true"] { color: var(--c-accent); }
+
+/* ---- Category filter pills ---- */
+nav.categories li > a {
+  border-color: var(--c-border);
+  color: var(--c-body);
+  font-family: var(--f-heading);
+  font-weight: 500;
+  transition: border-color 0.18s, color 0.18s, background-color 0.18s;
+}
+nav.categories li > a:hover,
+nav.categories li > a[aria-current="true"] {
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+  background-color: color-mix(in srgb, var(--c-accent) 8%, transparent);
+}
+
+/* ---- Page title / hgroup ---- */
+hgroup h1 {
+  font-family: var(--f-heading);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--c-heading);
+}
+hgroup p { color: var(--c-body); }
+
+/* ---- Album cards (home grid) ---- */
+.card { transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+.card > div > h2 {
+  font-family: var(--f-heading);
+  font-weight: 700;
+  color: var(--c-heading);
+}
+.card > div > p { color: var(--c-muted); }
+
+/* ---- Featured hero card ---- */
+.featured-card > div > h2 {
+  font-family: var(--f-heading);
+  font-weight: 800;
+}
+
+/* ---- Social icons ---- */
+section.social-icons a {
+  color: var(--c-muted);
+  transition: color 0.18s, transform 0.18s;
+}
+section.social-icons a:hover {
+  color: var(--c-accent);
+  transform: translateY(-2px);
+}
+
+/* ---- Footer ---- */
+body > footer {
+  border-top: 1px solid var(--c-border);
+  color: var(--c-muted);
+}
+body > footer section:last-of-type a { color: var(--c-muted); }
+body > footer section:last-of-type a:hover { color: var(--c-accent); }
+
+/* ============================================================
    Gallery banner (Amazing Women in Tech cover image)
    ============================================================ */
 .gallery-banner {
@@ -22,6 +151,7 @@
    ============================================================ */
 .caption-name {
   display: block;
+  font-family: var(--f-heading);
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 10px;
@@ -36,6 +166,12 @@
 .caption-bullets li {
   margin-bottom: 6px;
   line-height: 1.5;
+}
+
+/* Strip the <p> wrapper that markdownify adds around inline links */
+.caption-bullets li p {
+  display: inline;
+  margin: 0;
 }
 
 /* ============================================================

@@ -1,6 +1,6 @@
 ---
 menus: "main"
 categories: ["Code"]
-description: 
+description: Code-themed illustrations for talks, workshops, and learning materials.
 title: Code
 ---
