@@ -196,6 +196,20 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
   overflow: hidden;
 }
 
+/* Portraits are displayed as square tiles — fill the cell without distortion */
+.gallery-item--bio figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.gallery-item--bio figure img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .gallery-item--bio::after {
   content: attr(title);
   position: absolute;
