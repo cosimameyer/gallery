@@ -134,6 +134,67 @@ body > footer section:last-of-type a { color: var(--c-muted); }
 body > footer section:last-of-type a:hover { color: var(--c-accent); }
 
 /* ============================================================
+   Amazing Women in Tech — mission block above the gallery grid
+   ============================================================ */
+.bio-intro {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.bio-intro p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--c-body);
+}
+
+.bio-intro strong {
+  color: var(--c-heading);
+}
+
+.bio-intro a {
+  color: var(--c-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ============================================================
+   Portrait hover — name overlay
+   ============================================================ */
+.gallery-item--bio {
+  /* gallery.js sets position:absolute; ensure ::after is relative to it */
+  overflow: hidden;
+}
+
+.gallery-item--bio::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 0.6rem 0.6rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+  color: #fff;
+  font-family: var(--f-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-item--bio:hover::after {
+  opacity: 1;
+}
+
+/* ============================================================
    PhotoSwipe toolbar — modern frosted-glass buttons
    ============================================================ */
 .pswp__top-bar {

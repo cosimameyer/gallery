@@ -7,6 +7,12 @@
   {{- end -}}
 {{- end -}}
 
+{{- if $.Params.womenBio -}}
+<div class="bio-intro">
+  <p>The <strong>Amazing Women in Tech</strong> project celebrates the women who shaped — and are shaping — programming, statistics, and STEM through illustrated portraits. Each portrait is regularly shared with a short biography via the <a href="https://cosimameyer.github.io/community-bots/" target="_blank" rel="noopener">community bots on LinkedIn and Mastodon</a>. Click any portrait to read the bio.</p>
+</div>
+{{- end -}}
+
 <section class="gallery">
   <div id="gallery" style="visibility: hidden; height: 1px; overflow: hidden">
     {{ $images := slice }}
@@ -48,7 +54,7 @@
         {{- if gt (len $nameParts) 1 -}}
           {{- $altText = printf "Illustration of %s" (index $nameParts 0) -}}
         {{- end -}}
-        <a class="gallery-item" href="{{ $image.RelPermalink }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" data-pswp-target="{{ $image.Name | urlize }}" title="{{ index $nameParts 0 }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
+        <a class="gallery-item gallery-item--bio" href="{{ $image.RelPermalink }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" data-pswp-target="{{ $image.Name | urlize }}" title="{{ index $nameParts 0 }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
           <figure style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
             <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ $altText }}" />
           </figure>
