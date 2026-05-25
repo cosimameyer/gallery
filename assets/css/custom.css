@@ -417,3 +417,51 @@ section.featured {
   font-size: 0.82rem;
   line-height: 1.5;
 }
+
+/* ============================================================
+   A–Z jump navigation
+   ============================================================ */
+.az-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+  max-width: 680px;
+}
+
+.az-nav a,
+.az-nav span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-family: var(--f-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.18s, color 0.18s, border-color 0.18s;
+}
+
+/* Active letter — outlined accent circle */
+.az-nav a {
+  color: var(--c-accent);
+  border: 1.5px solid var(--c-accent);
+  background-color: transparent;
+}
+
+.az-nav a:hover {
+  background-color: var(--c-accent);
+  color: #fff;
+}
+
+/* Inactive letter — dimmed, no border */
+.az-nav span {
+  color: var(--c-border);
+  border: 1.5px solid transparent;
+  cursor: default;
+}
