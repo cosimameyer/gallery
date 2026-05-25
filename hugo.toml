@@ -8,6 +8,5 @@ copyright = "© Cosima Meyer"
   [params.Author]
     name = "Cosima Meyer"
   [params.socialIcons]
-    email = "mailto:contact@cosimameyer.com"
     linkedin = "https://www.linkedin.com/in/cosimameyer/"
     github = "https://github.com/cosimameyer/"

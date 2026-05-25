@@ -104,7 +104,13 @@ hgroup p { color: var(--c-body); }
 .card > div > p { color: var(--c-muted); }
 
 /* ---- Featured hero card ---- */
-.featured-card > div > h2 {
+/* The card is an <a> so it inherits link color — force white over the dark image */
+.featured-card,
+.featured-card h2,
+.featured-card p {
+  color: #ffffff;
+}
+.featured-card h2 {
   font-family: var(--f-heading);
   font-weight: 800;
 }
@@ -126,6 +132,39 @@ body > footer {
 }
 body > footer section:last-of-type a { color: var(--c-muted); }
 body > footer section:last-of-type a:hover { color: var(--c-accent); }
+
+/* ============================================================
+   PhotoSwipe toolbar — modern frosted-glass buttons
+   ============================================================ */
+.pswp__top-bar {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 100%);
+  height: 72px;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.pswp__button {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,0.12) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  margin: 0 3px !important;
+  transition: background 0.18s ease !important;
+  opacity: 1 !important;
+}
+
+.pswp__button:hover {
+  background: rgba(255,255,255,0.24) !important;
+}
+
+.pswp__icn {
+  top: 4px !important;
+  left: 4px !important;
+  width: 32px !important;
+  height: 32px !important;
+}
 
 /* ============================================================
    Gallery banner (Amazing Women in Tech cover image)
