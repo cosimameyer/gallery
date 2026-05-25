@@ -197,8 +197,8 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
 }
 
 .caption-bullets {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding: 0 0 0 1.1em;
   margin: 0;
 }
 
