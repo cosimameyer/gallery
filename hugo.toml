@@ -2,6 +2,5 @@ theme = "hugo-theme-gallery"
 baseURL = "https://gallery.cosimameyer.com/"
 [params]
   [params.socialIcons]
-    email = "mailto:contact@cosimameyer.com"
-    linkedin = "https://www.linkedin.com/in/cosimameyer/"
+linkedin = "https://www.linkedin.com/in/cosimameyer/"
     github = "https://github.com/cosimameyer/"
