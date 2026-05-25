@@ -102,7 +102,7 @@
           {{- $seenLetters.Set $letter true -}}
           {{- $anchorId = $letter -}}
         {{- end -}}
-        <a class="gallery-item gallery-item--bio"{{ if $anchorId }} id="portrait-{{ $anchorId }}"{{ end }} href="{{ $image.RelPermalink }}" data-pswp-src="{{ $pswpSrc }}" data-pswp-width="{{ $pswpW }}" data-pswp-height="{{ $pswpH }}" data-pswp-target="{{ $image.Name | urlize }}" title="{{ index $nameParts 0 }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
+        <a class="gallery-item gallery-item--bio"{{ if $anchorId }} id="portrait-{{ $anchorId }}" data-letter="{{ upper $letter }}"{{ end }} href="{{ $image.RelPermalink }}" data-pswp-src="{{ $pswpSrc }}" data-pswp-width="{{ $pswpW }}" data-pswp-height="{{ $pswpH }}" data-pswp-target="{{ $image.Name | urlize }}" title="{{ index $nameParts 0 }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
           <figure style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
             <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ $altText }}" />
           </figure>

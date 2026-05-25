@@ -476,3 +476,32 @@ section.featured {
   border: 1.5px solid transparent;
   cursor: default;
 }
+
+/* ============================================================
+   A–Z group headings (injected into the portrait grid by custom.js)
+   ============================================================ */
+.az-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  pointer-events: none;
+  user-select: none;
+  box-sizing: border-box;
+  /* left/right/height/top are set inline by JS */
+}
+
+.az-group-heading span {
+  font-family: var(--f-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--c-border);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.az-group-heading::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: var(--c-border);
+}
