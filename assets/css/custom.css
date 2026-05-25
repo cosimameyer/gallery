@@ -161,6 +161,29 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
   text-underline-offset: 2px;
 }
 
+/* "Follow the series" CTA */
+.bio-follow {
+  margin-top: 1rem !important;
+}
+
+.bio-follow a {
+  display: inline-block;
+  font-family: var(--f-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--c-accent) !important;
+  text-decoration: none !important;
+  border: 1.5px solid var(--c-accent);
+  border-radius: 999px;
+  padding: 0.4em 1.1em;
+  transition: background-color 0.18s, color 0.18s;
+}
+
+.bio-follow a:hover {
+  background-color: var(--c-accent);
+  color: #fff !important;
+}
+
 /* ============================================================
    Portrait hover — name overlay
    ============================================================ */
@@ -365,4 +388,28 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
 .pswp__dynamic-caption--mobile a:hover {
   opacity: 0.85;
   text-decoration-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================================
+   Lightbox background — deep navy instead of pure black
+   Feels more continuous with the illustration style
+   ============================================================ */
+.pswp__bg {
+  background: #0A0F1E !important;
+}
+
+/* ============================================================
+   Featured card — full content width (no side padding)
+   ============================================================ */
+section.featured {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ============================================================
+   Album cards — muted text for description excerpt
+   ============================================================ */
+.card > div > p {
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
