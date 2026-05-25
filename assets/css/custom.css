@@ -1,0 +1,132 @@
+/* ============================================================
+   Gallery banner (Amazing Women in Tech cover image)
+   ============================================================ */
+.gallery-banner {
+  width: 100%;
+  max-height: 380px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.gallery-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ============================================================
+   Bio caption — base (shared by desktop aside + mobile)
+   ============================================================ */
+.caption-name {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.caption-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.caption-bullets li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   Bio caption — Desktop aside panel
+   The caption sits in a sidebar to the right of the image.
+   ============================================================ */
+.pswp__dynamic-caption--aside {
+  padding: 32px 28px !important;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Name as a clear, elegant heading */
+.pswp__dynamic-caption--aside .caption-name {
+  font-size: 1.55em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  line-height: 1.2;
+}
+
+/* Bio bullet list */
+.pswp__dynamic-caption--aside .caption-bullets {
+  flex: 1;
+}
+
+.pswp__dynamic-caption--aside .caption-bullets li {
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.80);
+  margin-bottom: 10px;
+}
+
+/* "and much more" — same style as other bullets */
+.pswp__dynamic-caption--aside .caption-bullets li:last-child {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85em;
+}
+
+/* Links in aside: inherit white color */
+.pswp__dynamic-caption--aside a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+  transition: text-decoration-color 0.15s ease, opacity 0.15s ease;
+}
+
+.pswp__dynamic-caption--aside a:hover {
+  text-decoration-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.9;
+}
+
+/* ============================================================
+   Bio caption — Mobile overlay
+   Caption overlaps the bottom of the image on narrow screens.
+   ============================================================ */
+.pswp__dynamic-caption--mobile .caption-name {
+  font-size: 1.15em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.pswp__dynamic-caption--mobile .caption-bullets li {
+  font-size: 0.85em;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.pswp__dynamic-caption--mobile .caption-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.pswp__dynamic-caption--mobile a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(255, 255, 255, 0.55);
+}
+
+.pswp__dynamic-caption--mobile a:hover {
+  opacity: 0.85;
+  text-decoration-color: rgba(255, 255, 255, 0.9);
+}
