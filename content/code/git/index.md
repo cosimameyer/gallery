@@ -3,8 +3,10 @@ description: This album showcases visualizations related to Git, including workf
 title: Git
 categories: ["Code"]
 resources:
-  - src: branches2.png
+  - src: branches2.gif
     title: GIF showing how a feature branch evolves from a main branch and is then guided back (merged) into the main branch
+    params:
+      gif: true
   - src: git_rstudio.png
     title: Visualization showing a typical workflow when using GitHub in RStudio with a new project 1) Create a new repository on GitHub, 2) Open . Rproj in RStudio, 3) Connect with GitHub - and now it’s time to pull, commit and push :)
   - src: git_vscode.png
