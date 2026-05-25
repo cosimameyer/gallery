@@ -222,10 +222,11 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
 }
 
 /* ============================================================
-   PhotoSwipe toolbar — modern frosted-glass buttons
+   PhotoSwipe toolbar — dark-pill buttons (always legible,
+   even over light-background images)
    ============================================================ */
 .pswp__top-bar {
-  background: linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 100%);
   height: 72px;
   align-items: center;
   padding: 0 8px;
@@ -235,23 +236,33 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
   width: 40px !important;
   height: 40px !important;
   border-radius: 50% !important;
-  background: rgba(255,255,255,0.12) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  /* Dark opaque background — stays dark regardless of image behind it */
+  background: rgba(0,0,0,0.45) !important;
   margin: 0 3px !important;
   transition: background 0.18s ease !important;
   opacity: 1 !important;
 }
 
 .pswp__button:hover {
-  background: rgba(255,255,255,0.24) !important;
+  background: rgba(0,0,0,0.65) !important;
 }
 
+/* Ensure icons are always white and render on top of the dark pill */
 .pswp__icn {
   top: 4px !important;
   left: 4px !important;
   width: 32px !important;
   height: 32px !important;
+  fill: #fff !important;
+}
+
+/* Navigation arrows use a 60×60 viewBox — shrink to fit our smaller button */
+.pswp__button--arrow .pswp__icn {
+  top: 4px !important;
+  left: 4px !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin-top: 0 !important;
 }
 
 /* ============================================================
