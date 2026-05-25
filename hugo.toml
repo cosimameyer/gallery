@@ -8,5 +8,6 @@ copyright = "© Cosima Meyer"
   [params.Author]
     name = "Cosima Meyer"
   [params.socialIcons]
+    website = "https://cosimameyer.com"
     linkedin = "https://www.linkedin.com/in/cosimameyer/"
     github = "https://github.com/cosimameyer/"

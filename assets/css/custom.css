@@ -74,11 +74,15 @@ nav.categories li > a {
   font-weight: 500;
   transition: border-color 0.18s, color 0.18s, background-color 0.18s;
 }
-nav.categories li > a:hover,
+nav.categories li > a:hover {
+  border-color: var(--c-accent);
+  color: #fff;
+  background-color: var(--c-accent);
+}
 nav.categories li > a[aria-current="true"] {
   border-color: var(--c-accent);
-  color: var(--c-accent);
-  background-color: color-mix(in srgb, var(--c-accent) 8%, transparent);
+  color: #fff;
+  background-color: var(--c-accent);
 }
 
 /* ---- Page title / hgroup ---- */
