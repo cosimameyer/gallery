@@ -77,8 +77,8 @@ nav.categories li > a {
 }
 nav.categories li > a:hover {
   border-color: var(--c-accent);
-  color: var(--c-accent);
-  background-color: transparent;
+  color: #fff;
+  background-color: var(--c-accent);
 }
 nav.categories li > a[aria-current="true"] {
   background-color: var(--c-accent);
@@ -482,8 +482,8 @@ section.featured {
 
 .az-nav a:hover {
   border-color: var(--c-accent);
-  color: var(--c-accent);
-  background: none;
+  color: #fff;
+  background-color: var(--c-accent);
 }
 
 /* Active letter — filled, same as pf-btn.active */
