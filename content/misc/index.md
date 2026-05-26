@@ -2,8 +2,10 @@
 title: Community Art
 description: Illustrations celebrating the R, Python, and open-source communities — from R-Ladies and PyLadies to International Women's Day.
 resources:
+  - src: rladies_cologne.png
+    title: Hexagonal logo for R-Ladies Cologne featuring the R-Ladies 'R' logo at the top, the text 'R Ladies Cologne' in purple and grey, and the twin spires of Cologne Cathedral in purple at the bottom.
   - src: rladies_bot.png
-    title: Image showing a little R-Ladies super hero
+    title: Hexagonal sticker showing an illustrated purple-haired person wearing a superhero costume with an R logo on the chest, smiling with eyes closed.
   - src: r-ladies_small.png
     title: Image showing a world with diverse people on it and a person with a cape holding a sign with 'R-Ladies' on it
   - src: pyladies_small.png
