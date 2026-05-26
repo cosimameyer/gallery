@@ -1,4 +1,5 @@
 theme = "hugo-theme-gallery"
+timeout = "120s"
 baseURL = "https://gallery.cosimameyer.com/"
 title = "Cosima Meyer — Illustrations"
 languageCode = "en-US"
