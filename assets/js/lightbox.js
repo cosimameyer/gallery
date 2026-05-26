@@ -52,19 +52,19 @@ if (gallery) {
     history.replaceState("", document.title, window.location.pathname);
   });
 
-  const captionPlugin = new PhotoSwipeDynamicCaption(lightbox, {
+  new PhotoSwipeDynamicCaption(lightbox, {
     mobileLayoutBreakpoint: 700,
     type: "auto",
     mobileCaptionOverlapRatio: 1,
-  });
-
-  lightbox.on("init", () => {
-    lightbox.pswp.on("dynamicCaptionUpdateHTML", (e) => {
-      e.captionElement.innerHTML = e.captionElement.innerHTML.replace(
-        /\[([^\]]+)\]\(((?:[^)(]+|\([^)]*\))*)\)/g,
-        '<a href="$2" target="_blank" rel="noopener">$1</a>'
-      );
-    });
+    captionContent: (slide) => {
+      const el = slide.data.element;
+      const tpl = el.nextElementSibling;
+      if (tpl && tpl.tagName === "TEMPLATE" && tpl.classList.contains("pswp-caption-content")) {
+        return tpl.innerHTML;
+      }
+      const inner = el.querySelector(".pswp-caption-content");
+      return inner ? inner.innerHTML : "";
+    },
   });
 
   lightbox.init();

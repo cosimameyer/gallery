@@ -1,4 +1,296 @@
 /* ============================================================
+   Design tokens — aligned with cosimameyer.com 2026 refresh
+   ============================================================ */
+:root {
+  --c-bg:          #F5F7FF;
+  --c-heading:     #1D2B4E;
+  --c-body:        #3E4D78;
+  --c-muted:       #7A8BB2;
+  --c-accent:      #4D85EA;
+  --c-accent-dark: #2B62C8;
+  --c-border:      #CDD9F5;
+
+  --f-heading: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+  --f-body:    'Poppins', sans-serif;
+
+  --shadow-card: 0 8px 32px color-mix(in srgb, var(--c-accent) 14%, transparent);
+
+  /* Override gallery theme light-mode surface and text tokens */
+  --surface-1-light: var(--c-bg);
+  --text-1-light:    var(--c-heading);
+  --text-2-light:    var(--c-muted);
+  --border-light:    var(--c-border);
+}
+
+/* ---- Global typography ---- */
+body {
+  font-family: var(--f-body);
+  color: var(--c-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--f-heading);
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--c-accent-dark);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+a:hover { color: var(--c-heading); }
+
+/* ---- Header / site wordmark ---- */
+body > header {
+  background-color: color-mix(in srgb, var(--c-bg) 96%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--c-border);
+}
+
+body > header .btn {
+  font-family: var(--f-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--c-heading);
+}
+
+body > header .btn:hover { color: var(--c-accent-dark); }
+
+/* ---- Mobile nav menu ---- */
+body > menu a {
+  font-family: var(--f-heading);
+  font-weight: 600;
+  color: var(--c-body);
+}
+body > menu a:hover,
+body > menu a[aria-current="true"] { color: var(--c-accent-dark); }
+
+/* ---- Category filter pills — match cosimameyer.com .pf-btn ---- */
+nav.categories li > a {
+  background: none;
+  border-color: var(--c-border);
+  color: var(--c-body);
+  font-family: var(--f-heading);
+  font-weight: 600;
+  transition: border-color 0.18s, color 0.18s, background-color 0.18s;
+}
+nav.categories li > a:hover {
+  border-color: var(--c-accent-dark);
+  color: #fff;
+  background-color: var(--c-accent-dark);
+}
+nav.categories li > a[aria-current="true"] {
+  background-color: var(--c-accent-dark);
+  border-color: var(--c-accent-dark);
+  color: #fff;
+}
+
+/* ---- Page title / hgroup ---- */
+hgroup h1 {
+  font-family: var(--f-heading);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--c-heading);
+}
+hgroup p { color: var(--c-body); }
+
+/* ---- Album cards (home grid) ---- */
+.card { transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+.card > div > h2 {
+  font-family: var(--f-heading);
+  font-weight: 700;
+  color: var(--c-heading);
+}
+.card > div > p { color: var(--c-muted); }
+
+/* ---- Featured hero card ---- */
+/* The card is an <a> so it inherits link color — force white over the dark image */
+.featured-card,
+.featured-card h2,
+.featured-card p {
+  color: #ffffff;
+}
+.featured-card h2 {
+  font-family: var(--f-heading);
+  font-weight: 800;
+}
+
+/* ---- Social icons ---- */
+section.social-icons a {
+  color: var(--c-muted);
+  transition: color 0.18s, transform 0.18s;
+}
+section.social-icons a:hover {
+  color: var(--c-accent-dark);
+  transform: translateY(-2px);
+}
+
+/* ---- Footer ---- */
+body > footer {
+  border-top: 1px solid var(--c-border);
+  color: var(--c-body);
+}
+body > footer section:last-of-type a { color: var(--c-body); }
+body > footer section:last-of-type a:hover { color: var(--c-accent-dark); }
+
+/* ============================================================
+   Amazing Women in Tech — mission block above the gallery grid
+   ============================================================ */
+.bio-intro {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.bio-intro p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--c-body);
+}
+
+.bio-intro strong {
+  color: var(--c-heading);
+}
+
+.bio-intro a {
+  color: var(--c-accent-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* "Follow the series" CTA */
+.bio-follow {
+  margin-top: 1rem !important;
+}
+
+.bio-follow a {
+  display: inline-block;
+  font-family: var(--f-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--c-accent-dark) !important;
+  text-decoration: none !important;
+  border: 1.5px solid var(--c-accent-dark);
+  border-radius: 999px;
+  padding: 0.4em 1.1em;
+  transition: background-color 0.18s, color 0.18s;
+}
+
+.bio-follow a:hover {
+  background-color: var(--c-accent-dark);
+  color: #fff !important;
+}
+
+/* ============================================================
+   A–Z anchor scroll offset
+   The id is on the first portrait of each letter, but the heading
+   floats 78px above it (PAD_TOP 24 + HEAD_H 40 + PAD_BOT 14) and
+   the sticky header adds ~4rem. scroll-margin-top keeps both visible.
+   ============================================================ */
+[id^="portrait-"] {
+  scroll-margin-top: calc(4rem + 80px);
+}
+
+/* ============================================================
+   Portrait hover — name overlay
+   ============================================================ */
+.gallery-item--bio {
+  /* gallery.js sets position:absolute; ensure ::after is relative to it */
+  overflow: hidden;
+}
+
+/* Portraits are displayed as square tiles — fill the cell without distortion */
+.gallery-item--bio figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.gallery-item--bio figure img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.gallery-item--bio::after {
+  content: attr(data-overlay-name);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 0.6rem 0.6rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
+  color: #fff;
+  font-family: var(--f-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-item--bio:hover::after {
+  opacity: 1;
+}
+
+/* ============================================================
+   PhotoSwipe toolbar — dark-pill buttons (always legible,
+   even over light-background images)
+   ============================================================ */
+.pswp__top-bar {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 100%);
+  height: 72px;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.pswp__button {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  /* Dark opaque background — stays dark regardless of image behind it */
+  background: rgba(0,0,0,0.45) !important;
+  margin: 0 3px !important;
+  transition: background 0.18s ease !important;
+  opacity: 1 !important;
+}
+
+.pswp__button:hover {
+  background: rgba(0,0,0,0.65) !important;
+}
+
+/* Ensure icons are always white and render on top of the dark pill */
+.pswp__icn {
+  top: 4px !important;
+  left: 4px !important;
+  width: 32px !important;
+  height: 32px !important;
+  fill: #fff !important;
+}
+
+/* Navigation arrows use a 60×60 viewBox — shrink to fit our smaller button */
+.pswp__button--arrow .pswp__icn {
+  top: 4px !important;
+  left: 4px !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin-top: 0 !important;
+}
+
+/* ============================================================
    Gallery banner (Amazing Women in Tech cover image)
    ============================================================ */
 .gallery-banner {
@@ -22,20 +314,27 @@
    ============================================================ */
 .caption-name {
   display: block;
+  font-family: var(--f-heading);
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .caption-bullets {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding: 0 0 0 1.1em;
   margin: 0;
 }
 
 .caption-bullets li {
   margin-bottom: 6px;
   line-height: 1.5;
+}
+
+/* Strip the <p> wrapper that markdownify adds around inline links */
+.caption-bullets li p {
+  display: inline;
+  margin: 0;
 }
 
 /* ============================================================
@@ -129,4 +428,337 @@
 .pswp__dynamic-caption--mobile a:hover {
   opacity: 0.85;
   text-decoration-color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================================
+   Lightbox background — deep navy instead of pure black
+   Feels more continuous with the illustration style
+   ============================================================ */
+.pswp__bg {
+  background: #0A0F1E !important;
+}
+
+/* ============================================================
+   Featured card — full content width (no side padding)
+   ============================================================ */
+section.featured {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ============================================================
+   Portrait gallery — extra breathing room on the sides
+   ============================================================ */
+section.gallery {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 640px) {
+  section.gallery {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* ============================================================
+   Album cards — muted text for description excerpt
+   ============================================================ */
+.card > div > p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   A–Z jump navigation
+   ============================================================ */
+.az-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+  max-width: 680px;
+}
+
+.az-nav a,
+.az-nav span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-family: var(--f-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.18s, color 0.18s, border-color 0.18s;
+}
+
+/* Available letter — match cosimameyer.com .pf-btn pattern */
+.az-nav a {
+  background: none;
+  border: 1.5px solid var(--c-border);
+  color: var(--c-body);
+}
+
+.az-nav a:hover {
+  border-color: var(--c-accent-dark);
+  color: #fff;
+  background-color: var(--c-accent-dark);
+}
+
+/* Unavailable letter — muted, no border */
+.az-nav span {
+  color: var(--c-border);
+  border: 1.5px solid transparent;
+  cursor: default;
+}
+
+/* ============================================================
+   A–Z group headings (injected into the portrait grid by custom.js)
+   ============================================================ */
+.az-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  pointer-events: none;
+  user-select: none;
+  box-sizing: border-box;
+  /* left/right/height/top are set inline by JS */
+}
+
+.az-group-heading span {
+  font-family: var(--f-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--c-border);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.az-group-heading::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: var(--c-border);
+}
+
+/* ============================================================
+   Header wordmark — split colour (Cosima=accent, Meyer=heading)
+   ============================================================ */
+a.btn.wordmark {
+  font-family: var(--f-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.wordmark-first {
+  color: var(--c-accent);
+}
+
+.wordmark-last {
+  color: var(--c-heading);
+}
+
+a.btn.wordmark:hover .wordmark-first,
+a.btn.wordmark:hover .wordmark-last {
+  color: var(--c-accent-dark);
+}
+
+/* ============================================================
+   Featured hero card — cover image fills the card correctly
+   ============================================================ */
+.featured-card {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* ============================================================
+   Album cards — rounded images + accent-tinted hover shadow
+   ============================================================ */
+.card figure {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--c-accent) 20%, transparent);
+}
+
+/* ============================================================
+   Footer — CTA back-link + licence line
+   ============================================================ */
+.footer-cta {
+  text-align: center;
+  padding: 0.5rem 0 0.25rem;
+}
+
+.footer-home-link {
+  display: inline-block;
+  font-family: var(--f-heading);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--c-accent-dark) !important;
+  text-decoration: none !important;
+  border: 1.5px solid var(--c-accent-dark);
+  border-radius: 999px;
+  padding: 0.4em 1.2em;
+  transition: background-color 0.18s, color 0.18s;
+}
+
+.footer-home-link:hover {
+  background-color: var(--c-accent-dark);
+  color: #fff !important;
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.2rem;
+  font-size: 0.82rem;
+  color: var(--c-body);
+}
+
+.footer-license a {
+  color: var(--c-body);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-license a:hover {
+  color: var(--c-accent-dark);
+}
+
+/* ============================================================
+   Home — hero strip
+   ============================================================ */
+.site-hero {
+  text-align: center;
+  /* Pull up to cancel header's margin-bottom (2rem mobile, 3rem ≥640px) */
+  margin-top: -2rem;
+  padding: calc(3.5rem + 2rem) 1.5rem 3rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--c-accent) 16%, var(--c-bg)) 0%,
+    var(--c-bg) 100%
+  );
+}
+
+@media (min-width: 640px) {
+  .site-hero {
+    margin-top: -3rem;
+    padding-top: calc(3.5rem + 3rem);
+  }
+}
+
+.site-hero__tagline {
+  font-family: var(--f-heading);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 600;
+  color: var(--c-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin: 0 auto 1.5rem;
+  max-width: 520px;
+}
+
+.site-hero__link {
+  display: inline-block;
+  font-family: var(--f-heading);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--c-accent-dark);
+  text-decoration: none;
+  border: 1.5px solid var(--c-accent-dark);
+  border-radius: 999px;
+  padding: 0.4em 1.2em;
+  transition: background-color 0.18s, color 0.18s;
+}
+
+.site-hero__link:hover {
+  background-color: var(--c-accent-dark);
+  color: #fff;
+}
+
+/* ============================================================
+   Skip link (keyboard navigation)
+   Hidden off-screen; revealed when focused by keyboard
+   ============================================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5em 1em;
+  background: var(--c-heading);
+  color: #fff;
+  font-family: var(--f-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================================================
+   Focus-visible — keyboard-only focus ring
+   Suppressed for mouse clicks; shown for Tab/keyboard nav
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--c-accent-dark);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================================
+   Reduced-motion — respect user preference
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  section.social-icons a:hover {
+    transform: none;
+  }
+
+  .gallery-item--bio::after {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   Gallery noscript message
+   ============================================================ */
+.gallery-noscript {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--c-body);
+  font-size: 0.95rem;
 }

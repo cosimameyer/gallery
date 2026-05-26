@@ -1,0 +1,10 @@
+{{ if .Title }}
+  <hgroup>
+    <h1>{{ .Title }}</h1>
+    {{- if not .Params.womenBio -}}
+      {{ with .Params.Description }}
+        <p>{{ . | markdownify }}</p>
+      {{ end }}
+    {{- end -}}
+  </hgroup>
+{{ end }}

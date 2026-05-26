@@ -7,6 +7,38 @@
   {{- end -}}
 {{- end -}}
 
+{{- if $.Params.womenBio -}}
+<div class="bio-intro">
+  <p>Illustrated portraits celebrating the women who shaped — and keep shaping — programming, statistics, and STEM. Each portrait comes with a short biography, shared via the <a href="https://cosimameyer.github.io/community-bots/" target="_blank" rel="noopener">community bots on Mastodon and Bluesky</a>.</p>
+  <p class="bio-follow"><a href="https://cosimameyer.github.io/community-bots/" target="_blank" rel="noopener">Follow the series →</a></p>
+</div>
+
+{{- /* ---- A–Z jump nav: collect which letters have portraits ---- */ -}}
+{{- $alphabet := slice "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" -}}
+{{- $availLetters := slice -}}
+{{- range .Resources.ByType "image" -}}
+  {{- if ne .Name $coverImageName -}}
+    {{- $parts := split .Title "<br><br>" -}}
+    {{- $name := trim (index $parts 0) " " -}}
+    {{- if $name -}}
+      {{- $letter := upper (substr $name 0 1) -}}
+      {{- if not (in $availLetters $letter) -}}
+        {{- $availLetters = $availLetters | append $letter -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<nav class="az-nav" aria-label="Jump to portrait by first letter">
+  {{- range $alphabet -}}
+    {{- if in $availLetters . -}}
+      <a href="#portrait-{{ lower . }}">{{ . }}</a>
+    {{- else -}}
+      <span aria-hidden="true">{{ . }}</span>
+    {{- end -}}
+  {{- end -}}
+</nav>
+{{- end -}}
+
 <section class="gallery">
   <div id="gallery" style="visibility: hidden; height: 1px; overflow: hidden">
     {{ $images := slice }}
@@ -37,10 +69,24 @@
       }}
       {{- end -}}
     {{ end }}
+    {{- $seenLetters := newScratch -}}
     {{ range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") }}
       {{ $image := .image }}
       {{ $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
-      {{ $full := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
+      {{- /* For animated GIFs, serve the original file in the lightbox */ -}}
+      {{- $pswpSrc := "" -}}
+      {{- $pswpW := 0 -}}
+      {{- $pswpH := 0 -}}
+      {{- if .Params.gif -}}
+        {{- $pswpSrc = $image.RelPermalink -}}
+        {{- $pswpW = $image.Width -}}
+        {{- $pswpH = $image.Height -}}
+      {{- else -}}
+        {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) -}}
+        {{- $pswpSrc = $full.RelPermalink -}}
+        {{- $pswpW = $full.Width -}}
+        {{- $pswpH = $full.Height -}}
+      {{- end -}}
       {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
       {{- if $.Params.womenBio -}}
         {{- $altText := .Title -}}
@@ -48,7 +94,15 @@
         {{- if gt (len $nameParts) 1 -}}
           {{- $altText = printf "Illustration of %s" (index $nameParts 0) -}}
         {{- end -}}
-        <a class="gallery-item" href="{{ $image.RelPermalink }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" data-pswp-target="{{ $image.Name | urlize }}" title="{{ .Title }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
+        {{- /* First portrait of each letter gets an id for the A–Z jump nav */ -}}
+        {{- $firstName := trim (index $nameParts 0) " " -}}
+        {{- $letter := lower (upper (substr $firstName 0 1)) -}}
+        {{- $anchorId := "" -}}
+        {{- if not ($seenLetters.Get $letter) -}}
+          {{- $seenLetters.Set $letter true -}}
+          {{- $anchorId = $letter -}}
+        {{- end -}}
+        <a class="gallery-item gallery-item--bio"{{ if $anchorId }} id="portrait-{{ $anchorId }}" data-letter="{{ upper $letter }}"{{ end }} href="{{ $image.RelPermalink }}" data-pswp-src="{{ $pswpSrc }}" data-pswp-width="{{ $pswpW }}" data-pswp-height="{{ $pswpH }}" data-pswp-target="{{ $image.Name | urlize }}" data-overlay-name="{{ index $nameParts 0 }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
           <figure style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
             <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ $altText }}" />
           </figure>
@@ -58,25 +112,25 @@
               <meta itemprop="name" content="{{ site.Params.Author.name }}" />
             </span>
           {{ end }}
-          {{- if .Title -}}
-            {{- $parts := split .Title "<br><br>" -}}
-            <span class="pswp-caption-content">
-              <strong class="caption-name">{{ index $parts 0 | safeHTML }}</strong>
-              {{- if gt (len $parts) 1 -}}
-              <ul class="caption-bullets">
-                {{- range split (index $parts 1) "<br>" -}}
-                  {{- $line := trim . " \t\r\n" -}}
-                  {{- if $line -}}
-                    <li>{{ $line | safeHTML }}</li>
-                  {{- end -}}
-                {{- end -}}
-              </ul>
-              {{- end -}}
-            </span>
-          {{- end -}}
         </a>
+        {{- if .Title -}}
+          {{- $parts := split .Title "<br><br>" -}}
+          <template class="pswp-caption-content">
+            <strong class="caption-name">{{ index $parts 0 | safeHTML }}</strong>
+            {{- if gt (len $parts) 1 -}}
+            <ul class="caption-bullets">
+              {{- range split (index $parts 1) "<br>" -}}
+                {{- $line := trim . " \t\r\n" | strings.TrimPrefix "✨ " | strings.TrimPrefix "✨" -}}
+                {{- if $line -}}
+                  <li>{{ $line | markdownify }}</li>
+                {{- end -}}
+              {{- end -}}
+            </ul>
+            {{- end -}}
+          </template>
+        {{- end -}}
       {{- else -}}
-        <a class="gallery-item" href="{{ $image.RelPermalink }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" data-pswp-target="{{ $image.Name | urlize }}" title="{{ .Title }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
+        <a class="gallery-item" href="{{ $image.RelPermalink }}" data-pswp-src="{{ $pswpSrc }}" data-pswp-width="{{ $pswpW }}" data-pswp-height="{{ $pswpH }}" data-pswp-target="{{ $image.Name | urlize }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
           <figure style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
             <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
           </figure>
@@ -93,4 +147,7 @@
       {{- end -}}
     {{ end }}
   </div>
+  <noscript>
+    <p class="gallery-noscript">JavaScript is required to display the gallery. Please enable it in your browser settings to view the portraits.</p>
+  </noscript>
 </section>

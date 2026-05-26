@@ -1,6 +1,14 @@
 theme = "hugo-theme-gallery"
+timeout = "120s"
 baseURL = "https://gallery.cosimameyer.com/"
+title = "Cosima Meyer — Illustrations"
+languageCode = "en-US"
+copyright = "© Cosima Meyer"
+
 [params]
+  [params.Author]
+    name = "Cosima Meyer"
   [params.socialIcons]
-linkedin = "https://www.linkedin.com/in/cosimameyer/"
+    website = "https://cosimameyer.com"
+    linkedin = "https://www.linkedin.com/in/cosimameyer/"
     github = "https://github.com/cosimameyer/"
