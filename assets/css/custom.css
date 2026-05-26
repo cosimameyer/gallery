@@ -486,13 +486,6 @@ section.featured {
   background-color: var(--c-accent);
 }
 
-/* Active letter — filled, same as pf-btn.active */
-.az-nav a.active {
-  background-color: var(--c-accent);
-  border-color: var(--c-accent);
-  color: #fff;
-}
-
 /* Unavailable letter — muted, no border */
 .az-nav span {
   color: var(--c-border);
