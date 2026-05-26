@@ -222,7 +222,7 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
 }
 
 .gallery-item--bio::after {
-  content: attr(title);
+  content: attr(data-overlay-name);
   position: absolute;
   bottom: 0;
   left: 0;
