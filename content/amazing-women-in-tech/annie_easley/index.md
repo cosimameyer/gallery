@@ -1,6 +1,6 @@
 ---
 name: Annie Easley
-birthday: 04-23
+anniversary: 04-23
 alt: Image of Annie Easley (a brown-haired person with a pink blouse and earrings).
   The image has a darker background with fog and rockets.
 wiki_link: https://en.wikipedia.org/wiki/Annie_Easley

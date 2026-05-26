@@ -1,6 +1,6 @@
 ---
 name: Gabriela de Queiroz
-birthday: 10-02
+anniversary: 10-02
 alt: Image of Gabriela de Queiroz (a black-haired person wearing a dark pullover).
   The image has a darker background with nebula and the words RLadies+ and AI Inclusive.
 wiki_link: https://en.m.wikipedia.org/wiki/RLadies+#Gabriela_de_Queiroz

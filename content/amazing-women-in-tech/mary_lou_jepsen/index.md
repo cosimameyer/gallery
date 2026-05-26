@@ -1,6 +1,6 @@
 ---
 name: Mary Lou Jepsen
-birthday: 04-05
+anniversary: 04-05
 alt: Image of Mary Lou Jepsen (a blonde person with medium-length hair, wearing a
   blue blouse and a necklace with a blue stone). The image has a darker background
   with fog and chips.

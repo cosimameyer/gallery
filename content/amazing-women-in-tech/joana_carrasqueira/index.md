@@ -1,6 +1,6 @@
 ---
 name: Joana Carrasqueira
-birthday: 04-19
+anniversary: 04-19
 alt: An image of Joana Carrasqueira, a blonde individual wearing a blue-and-white
   checkered blazer. The background features a dark, atmospheric blend of nebula-like
   clouds, accented with subtle pharmacy symbols—specifically the rod with a snake

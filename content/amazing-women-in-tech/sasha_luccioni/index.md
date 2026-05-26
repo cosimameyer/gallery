@@ -1,6 +1,6 @@
 ---
 name: Sasha Luccioni
-birthday: 06-25
+anniversary: 06-25
 alt: Image of Sasha Luccioni (a blond person wearing a blouse with butterflies, a
   necklace, and a sparkling earring). The image has a darker background with fog and
   the words ethical AI and sustainable AI.

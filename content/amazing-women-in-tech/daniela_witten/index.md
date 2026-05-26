@@ -1,6 +1,6 @@
 ---
 name: Daniela Witten
-birthday: 05-04
+anniversary: 05-04
 alt: Image of Daniela Witten (a blond-brown-haired person with curly hair and a black
   top). The image has a darker background with fog and the inscription 'bioSTATISTICS',
   'Intro to Statistical Learning', and 'high-dimensional data'.

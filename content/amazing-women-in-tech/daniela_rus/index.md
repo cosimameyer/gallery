@@ -1,6 +1,6 @@
 ---
 name: Daniela Rus
-birthday: 03-05
+anniversary: 03-05
 alt: Image of Daniela Rus (a person with medium-length, curly hair, wearing a black
   blouse and a necklace). The image has a darker background with fog and robots.
 wiki_link: https://en.wikipedia.org/wiki/Daniela_L._Rus

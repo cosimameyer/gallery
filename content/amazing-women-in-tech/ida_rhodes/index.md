@@ -1,6 +1,6 @@
 ---
 name: Ida Rhodes
-birthday: 05-15
+anniversary: 05-15
 alt: Image of Ida Rhodes (a dark-haired person wearing glasses, a green blouse, and
   a pearl necklace). The image has a darker background with fog and the writing 'The
   theory is based'.

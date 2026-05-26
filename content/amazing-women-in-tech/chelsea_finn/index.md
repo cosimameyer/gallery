@@ -1,6 +1,6 @@
 ---
 name: Chelsea Finn
-birthday: 05-12
+anniversary: 05-12
 alt: Image of Chelsea Finn (a brown-haired person with long/medium-length hair, wearing
   a black blouse and a necklace). The image has a darker background with fog and robots
   sitting on books.

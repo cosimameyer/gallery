@@ -1,6 +1,6 @@
 ---
 name: Reshama Shaikh
-birthday: 10-15
+anniversary: 10-15
 alt: Image of Reshama Shaikh (a dark-haired person wearing an blue colored shirt).
   The image has a darker background with nebula and puzzle pieces matching together.
 wiki_link: https://bit.ly/4g7ZfAn

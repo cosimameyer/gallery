@@ -1,6 +1,6 @@
 ---
 name: Crystal Ramjattan
-birthday: 08-27
+anniversary: 08-27
 alt: 'Image of Crystal Ramjattan (a dark-haired person wearing a yellow knitted sweater
   and red earrings). The image has a darker background with nebula and causal AI as
   well as #womenintech on it.'

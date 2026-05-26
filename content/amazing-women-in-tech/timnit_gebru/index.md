@@ -1,6 +1,6 @@
 ---
 name: Timnit Gebru
-birthday: 05-13
+anniversary: 05-13
 alt: Image of Timnit Gebru (a brown-haired person with black glasses and a red scarf).
   The image has a darker background with fog and the inscription 'The quest for ethical
   intelligence'.

@@ -1,6 +1,6 @@
 ---
 name: Ellie King
-birthday: 10-02
+anniversary: 10-02
 alt: Image of Ellie King (a blond person wearing a white hoody with EqualIT on it).
   The image has a darker background with blue nebula and images of a microphone as
   well as the words 'equality in IT'.

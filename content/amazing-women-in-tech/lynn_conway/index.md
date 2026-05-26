@@ -1,6 +1,6 @@
 ---
 name: Lynn Conway
-birthday: 01-02
+anniversary: 01-02
 alt: Image of Lynn Conway (a blonde person with long hair, wearing brown glasses,
   a white blouse and a necklace). The image has a darker background with fog and heads
   with brains.

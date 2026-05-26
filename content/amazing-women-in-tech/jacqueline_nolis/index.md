@@ -1,6 +1,6 @@
 ---
 name: Jacqueline Nolis
-birthday: 07-01
+anniversary: 07-01
 alt: Image of Jacqueline Nolis (a dark-haired person with curly short hair wearing
   a black top). The image has a darker background with fog and the puzzle pieces with
   'career' and 'code' on them (the pieces go together).

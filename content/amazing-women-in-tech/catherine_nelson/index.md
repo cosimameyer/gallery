@@ -1,6 +1,6 @@
 ---
 name: Catherine Nelson
-birthday: 08-04
+anniversary: 08-04
 alt: Image of Catherine Nelson (a brown-haired person wearing a green tshirt). The
   image has a darker background with nebula and a brain with artifical intelligen
   as well as the code symbol.

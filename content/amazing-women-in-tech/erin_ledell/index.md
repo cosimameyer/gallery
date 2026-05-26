@@ -1,6 +1,6 @@
 ---
 name: Erin LeDell
-birthday: 02-11
+anniversary: 02-11
 alt: Image of Erin LeDell (a person with medium-length, brown hair, wearing a green
   sweater). The image has a darker background with nebula and words 'autoML', 'machine
   learning', 'WiMLDS', and 'RLadies+'.

@@ -1,6 +1,6 @@
 ---
 name: Jana Schaich Borg
-birthday: 01-22
+anniversary: 01-22
 alt: Image of Jana Schaich Borg (a blond-haired person wearing a black top and a necklace).
   The image has a darker background with nebula and mosaic tiles showing a stick figure.
 wiki_link: https://www.janaschaichborg.com/

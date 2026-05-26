@@ -1,6 +1,6 @@
 ---
 name: Hedy Lamarr
-birthday: 10-30
+anniversary: 10-30
 alt: Image of Hedy Lamarr (a black-haired person wearing a blue blouse, a pearl necklace,
   and a fedora). The image has a darker background with nebula and shows the depiction
   of frequency hopping.

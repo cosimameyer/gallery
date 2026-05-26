@@ -1,6 +1,6 @@
 ---
 name: Daliana Liu
-birthday: 11-15
+anniversary: 11-15
 alt: Image of Daliana Liu (a black-haired person wearing a blue blazer and a gold
   necklace). The image has a darker background with nebula and a night sky, also images
   of a person sitting on a rocket and flying up stairs ('career accelerator').

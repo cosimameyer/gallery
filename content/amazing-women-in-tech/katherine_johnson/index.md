@@ -1,6 +1,6 @@
 ---
 name: Katherine Johnson
-birthday: 08-26
+anniversary: 08-26
 alt: Image of Katherine Johnson (a dark-haired person wearing glasses). The image
   has a darker background with fog and images of rockets.
 wiki_link: https://en.wikipedia.org/wiki/Katherine_Johnson

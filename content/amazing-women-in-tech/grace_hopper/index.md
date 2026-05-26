@@ -1,6 +1,6 @@
 ---
 name: Grace Hopper
-birthday: 12-09
+anniversary: 12-09
 alt: Image of Grace Hopper (a gray-haired person wearing glasses and a US Navy uniform).
   The image has a darker background with fog and computer code.
 wiki_link: https://en.wikipedia.org/wiki/Grace_Hopper

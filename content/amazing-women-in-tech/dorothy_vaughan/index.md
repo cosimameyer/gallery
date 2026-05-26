@@ -1,6 +1,6 @@
 ---
 name: Dorothy Vaughan
-birthday: 09-20
+anniversary: 09-20
 alt: Image of Dorothy Vaughan (a dark-haired person wearing glasses and a pearl necklace).
   The image has a darker background with fog and images of rockets, planets, and satellites.
 wiki_link: https://en.wikipedia.org/wiki/Dorothy_Vaughan

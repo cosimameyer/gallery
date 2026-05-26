@@ -1,6 +1,6 @@
 ---
 name: Mary Jackson
-birthday: 04-09
+anniversary: 04-09
 alt: Image of Mary Jackson (a dark-skinned person with dark hair and round glasses,
   wearing a gold hoop earring and a white lab coat). The background is dark blue with
   rows of numbers referencing her mathematical work at NASA.

@@ -1,6 +1,6 @@
 ---
 name: Melanie Mitchell
-birthday: 10-15
+anniversary: 10-15
 alt: Image of Melanie Mitchell (a dark-haired person wearing glasses). The image has
   a darker background with fog and the words 'AI - A Guide For Thinking Humans'.
 wiki_link: https://en.wikipedia.org/wiki/Melanie_Mitchell

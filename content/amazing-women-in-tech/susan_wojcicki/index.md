@@ -1,6 +1,6 @@
 ---
 name: Susan Wojcicki
-birthday: 07-05
+anniversary: 07-05
 alt: Image of Susan Wojcicki (a blond-haired person wearing a white shirt and a necklace).
   The image has a darker background with nebula and the word 'AdSense' as well as
   cameras (symbolizing YouTube) and a landing page of Google.

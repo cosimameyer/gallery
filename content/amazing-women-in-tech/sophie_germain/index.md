@@ -1,6 +1,6 @@
 ---
 name: Sophie Germain
-birthday: ''
+anniversary: ''
 alt: Image of Sophie Germain (a person with long dark curly hair, wearing a yellow
   off-shoulder dress). The background shows mathematical equations including Fermat's
   Last Theorem (x^n + y^n ≠ z^n).

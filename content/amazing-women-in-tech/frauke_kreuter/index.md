@@ -1,6 +1,6 @@
 ---
 name: Frauke Kreuter
-birthday: 08-20
+anniversary: 08-20
 alt: Image of Frauke Kreuter (a brown-haired person with curly hair and wearing glasses).
   The image has a darker background with fog and images of survey sheets.
 wiki_link: https://en.wikipedia.org/wiki/Frauke_Kreuter

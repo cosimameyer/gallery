@@ -1,6 +1,6 @@
 ---
 name: Tulsee Doshi
-birthday: 11-05
+anniversary: 11-05
 alt: Image of Tulsee Doshi (a person with long dark wavy hair, wearing a white floral
   blouse). The image has a darker background with nebula and communication windows.
 wiki_link: https://www.youtube.com/watch?v=nyXTSRfdpLw

@@ -1,6 +1,6 @@
 ---
 name: Naomi Ceder
-birthday: 12-02
+anniversary: 12-02
 alt: Image of Naomi Ceder (a blond-haired person wearing a blue sweater and glasses).
   The image has a darker background with nebula and Python symbols as well as '<Trans*Code/>'.
 wiki_link: https://en.wikipedia.org/wiki/Naomi_Ceder

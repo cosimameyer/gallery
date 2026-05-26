@@ -1,6 +1,6 @@
 ---
 name: Ada Lovelace
-birthday: 12-10
+anniversary: 12-10
 alt: Image of Ada Lovelace (a brown-haired person wearing a flower in her hair). The
   image has a darker background with nebula and a mathematical formula.
 wiki_link: https://en.wikipedia.org/wiki/Ada_Lovelace

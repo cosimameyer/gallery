@@ -1,6 +1,6 @@
 ---
 name: Frances Allen
-birthday: ''
+anniversary: ''
 alt: Image of Frances Allen (a gray-haired person with short curly hair, round glasses,
   and drop earrings, wearing a purple top). The background is dark with the letter
   'P' and colorful squares referencing parallel computing.

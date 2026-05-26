@@ -116,7 +116,7 @@ def main() -> None:
         # Build frontmatter
         person_fm = {
             "name": name,
-            "birthday": date,
+            "anniversary": date,
             "alt": alt,
             "wiki_link": wiki_link,
             "bluesky": bluesky,

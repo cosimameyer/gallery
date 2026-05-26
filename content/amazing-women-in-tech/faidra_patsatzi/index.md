@@ -1,6 +1,6 @@
 ---
 name: Faidra A. Patsatzi
-birthday: 12-11
+anniversary: 12-11
 alt: Image of Faidra A. Patsatzi (a brown-haired person wearing a brown blazer, a
   black top and a necklace). The image has a darker background with nebula and a person
   teaching Python.

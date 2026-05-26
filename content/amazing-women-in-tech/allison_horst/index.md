@@ -1,6 +1,6 @@
 ---
 name: Allison Horst
-birthday: 10-08
+anniversary: 10-08
 alt: Image of Allison Horst (a brown-haired person with blonde highlights wearing
   an orange sweater). The image has a darker background with nebula and the words
   'Rtistry' as well as little monsters (one looking at the name tag, the other one

@@ -1,6 +1,6 @@
 ---
 name: Aishwarya Srinivasan
-birthday: 05-06
+anniversary: 05-06
 alt: Image of Aishwarya Srinivasan (a dark-haired person with long hair, wearing earrings.
   The image has a darker background with nebula and angels.
 wiki_link: https://www.youtube.com/@aishwaryasrinivasan

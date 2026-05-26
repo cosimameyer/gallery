@@ -1,6 +1,6 @@
 ---
 name: Mia Shah-Dand
-birthday: 06-01
+anniversary: 06-01
 alt: Image of Mia Shah-Dand (a dark-haired person wearing a black pullover and purple
   lipstick). The image has a darker background with fog and the writing 'Responsible
   AI', 'Women in AI Ethics' and 'human-centered AI'.

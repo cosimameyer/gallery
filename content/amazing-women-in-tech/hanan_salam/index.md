@@ -1,6 +1,6 @@
 ---
 name: Hanan Salam
-birthday: 05-10
+anniversary: 05-10
 alt: Image of Hanan Salam (a brown-haired person wearing a dark red blazer and a white
   blouse). The image has a darker background with fog and the words 'Women in AI'
   and 'artificial social intelligence'.

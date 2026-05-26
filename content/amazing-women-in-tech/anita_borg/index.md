@@ -1,6 +1,6 @@
 ---
 name: Anita Borg
-birthday: 01-17
+anniversary: 01-17
 alt: Image of Anita Borg (a gray-haired person with a dark blouse and earrings). The
   image has a darker background with fog and two women symbolizing Systers.
 wiki_link: https://en.wikipedia.org/wiki/Anita_Borg

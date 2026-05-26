@@ -1,6 +1,6 @@
 ---
 name: Alison Presmanes Hill
-birthday: 11-05
+anniversary: 11-05
 alt: Image of Alison Hill (a brown-haired person wearing a green sweater). The image
   has a darker background with Northern lights and a night sky also showing one-liner
   of lemons (for Hugo Apéro) and penguins (for palmerpenguins).

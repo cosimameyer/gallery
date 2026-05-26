@@ -1,6 +1,6 @@
 ---
 name: Jessica Cherny
-birthday: 11-19
+anniversary: 11-19
 alt: Image of Jessica Cherny (a brown-haired person wearing a striped sweater). The
   image has a darker background with nebula and shows angels and the word data (for
   Data Angels).

@@ -1,6 +1,6 @@
 ---
 name: Joedian Reid
-birthday: 09-10
+anniversary: 09-10
 alt: Image of Joedian Reid (a black-haired person wearing a white blouse and a heart
   necklace). The image has a darker background with nebula and showing symbols of
   two women lifting each other.
