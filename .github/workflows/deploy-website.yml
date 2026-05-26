@@ -43,11 +43,15 @@ jobs:
         run: hugo --minify
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+        uses: Wandalen/wretry.action@v3
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./public/
-          server-dir: /web/gallery.cosimameyer.com/
+          action: SamKirkland/FTP-Deploy-Action@4.2.0
+          with: |
+            server: ${{ secrets.FTP_SERVER }}
+            username: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            protocol: ftps
+            local-dir: ./public/
+            server-dir: /web/gallery.cosimameyer.com/
+          attempt_limit: 3
+          attempt_delay: 10000
