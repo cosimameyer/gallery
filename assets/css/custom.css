@@ -66,20 +66,19 @@ body > menu a {
 body > menu a:hover,
 body > menu a[aria-current="true"] { color: var(--c-accent); }
 
-/* ---- Category filter pills ---- */
+/* ---- Category filter pills — match cosimameyer.com .pf-btn ---- */
 nav.categories li > a {
-  /* Filled by default — soft accent tint with strong text */
-  background-color: color-mix(in srgb, var(--c-accent) 10%, #fff);
-  border-color: color-mix(in srgb, var(--c-accent) 35%, transparent);
-  color: var(--c-accent-dark);
+  background: none;
+  border-color: var(--c-border);
+  color: var(--c-body);
   font-family: var(--f-heading);
   font-weight: 600;
   transition: border-color 0.18s, color 0.18s, background-color 0.18s;
 }
 nav.categories li > a:hover {
-  background-color: color-mix(in srgb, var(--c-accent) 20%, #fff);
   border-color: var(--c-accent);
-  color: var(--c-accent-dark);
+  color: var(--c-accent);
+  background-color: transparent;
 }
 nav.categories li > a[aria-current="true"] {
   background-color: var(--c-accent);
@@ -474,19 +473,20 @@ section.featured {
   transition: background-color 0.18s, color 0.18s, border-color 0.18s;
 }
 
-/* Active letter — outlined accent circle */
+/* Available letter — match cosimameyer.com .pf-btn pattern */
 .az-nav a {
-  color: var(--c-accent);
-  border: 1.5px solid var(--c-accent);
-  background-color: transparent;
+  background: none;
+  border: 1.5px solid var(--c-border);
+  color: var(--c-body);
 }
 
 .az-nav a:hover {
-  background-color: var(--c-accent);
-  color: #fff;
+  border-color: var(--c-accent);
+  color: var(--c-accent);
+  background: none;
 }
 
-/* Inactive letter — dimmed, no border */
+/* Unavailable letter — muted, no border */
 .az-nav span {
   color: var(--c-border);
   border: 1.5px solid transparent;
