@@ -1,0 +1,13 @@
+<!doctype html>
+{{- $theme := .Params.theme | default .Site.Params.defaultTheme }}
+<html class="{{- if (eq $theme "light") -}}light{{- else if (eq $theme "dark") }}dark{{ end }}" lang="{{- site.LanguageCode | default "en" -}}">
+  {{ partial "head.html" . }}
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "footer" . }}{{ partialCached "footer.html" . }}{{ end }}
+  </body>
+</html>

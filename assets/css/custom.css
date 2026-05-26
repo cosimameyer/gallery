@@ -34,11 +34,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---- Links ---- */
 a {
-  color: var(--c-accent);
+  color: var(--c-accent-dark);
   text-decoration: none;
   transition: color 0.18s;
 }
-a:hover { color: var(--c-accent-dark); }
+a:hover { color: var(--c-heading); }
 
 /* ---- Header / site wordmark ---- */
 body > header {
@@ -55,7 +55,7 @@ body > header .btn {
   color: var(--c-heading);
 }
 
-body > header .btn:hover { color: var(--c-accent); }
+body > header .btn:hover { color: var(--c-accent-dark); }
 
 /* ---- Mobile nav menu ---- */
 body > menu a {
@@ -64,7 +64,7 @@ body > menu a {
   color: var(--c-body);
 }
 body > menu a:hover,
-body > menu a[aria-current="true"] { color: var(--c-accent); }
+body > menu a[aria-current="true"] { color: var(--c-accent-dark); }
 
 /* ---- Category filter pills — match cosimameyer.com .pf-btn ---- */
 nav.categories li > a {
@@ -76,13 +76,13 @@ nav.categories li > a {
   transition: border-color 0.18s, color 0.18s, background-color 0.18s;
 }
 nav.categories li > a:hover {
-  border-color: var(--c-accent);
+  border-color: var(--c-accent-dark);
   color: #fff;
-  background-color: var(--c-accent);
+  background-color: var(--c-accent-dark);
 }
 nav.categories li > a[aria-current="true"] {
-  background-color: var(--c-accent);
-  border-color: var(--c-accent);
+  background-color: var(--c-accent-dark);
+  border-color: var(--c-accent-dark);
   color: #fff;
 }
 
@@ -126,17 +126,17 @@ section.social-icons a {
   transition: color 0.18s, transform 0.18s;
 }
 section.social-icons a:hover {
-  color: var(--c-accent);
+  color: var(--c-accent-dark);
   transform: translateY(-2px);
 }
 
 /* ---- Footer ---- */
 body > footer {
   border-top: 1px solid var(--c-border);
-  color: var(--c-muted);
+  color: var(--c-body);
 }
-body > footer section:last-of-type a { color: var(--c-muted); }
-body > footer section:last-of-type a:hover { color: var(--c-accent); }
+body > footer section:last-of-type a { color: var(--c-body); }
+body > footer section:last-of-type a:hover { color: var(--c-accent-dark); }
 
 /* ============================================================
    Amazing Women in Tech — mission block above the gallery grid
@@ -161,7 +161,7 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
 }
 
 .bio-intro a {
-  color: var(--c-accent);
+  color: var(--c-accent-dark);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -176,16 +176,16 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
   font-family: var(--f-heading);
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--c-accent) !important;
+  color: var(--c-accent-dark) !important;
   text-decoration: none !important;
-  border: 1.5px solid var(--c-accent);
+  border: 1.5px solid var(--c-accent-dark);
   border-radius: 999px;
   padding: 0.4em 1.1em;
   transition: background-color 0.18s, color 0.18s;
 }
 
 .bio-follow a:hover {
-  background-color: var(--c-accent);
+  background-color: var(--c-accent-dark);
   color: #fff !important;
 }
 
@@ -487,8 +487,8 @@ section.gallery {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   font-family: var(--f-heading);
   font-size: 0.78rem;
@@ -506,9 +506,9 @@ section.gallery {
 }
 
 .az-nav a:hover {
-  border-color: var(--c-accent);
+  border-color: var(--c-accent-dark);
   color: #fff;
-  background-color: var(--c-accent);
+  background-color: var(--c-accent-dark);
 }
 
 /* Unavailable letter — muted, no border */
@@ -560,7 +560,7 @@ a.btn.wordmark {
 }
 
 .wordmark-first {
-  color: var(--c-accent);
+  color: var(--c-accent-dark);
 }
 
 .wordmark-last {
@@ -606,16 +606,16 @@ a.btn.wordmark:hover .wordmark-last {
   font-family: var(--f-heading);
   font-weight: 600;
   font-size: 0.88rem;
-  color: var(--c-accent) !important;
+  color: var(--c-accent-dark) !important;
   text-decoration: none !important;
-  border: 1.5px solid var(--c-accent);
+  border: 1.5px solid var(--c-accent-dark);
   border-radius: 999px;
   padding: 0.4em 1.2em;
   transition: background-color 0.18s, color 0.18s;
 }
 
 .footer-home-link:hover {
-  background-color: var(--c-accent);
+  background-color: var(--c-accent-dark);
   color: #fff !important;
 }
 
@@ -626,17 +626,17 @@ a.btn.wordmark:hover .wordmark-last {
   justify-content: center;
   gap: 0.5rem 1.2rem;
   font-size: 0.82rem;
-  color: var(--c-muted);
+  color: var(--c-body);
 }
 
 .footer-license a {
-  color: var(--c-muted);
+  color: var(--c-body);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .footer-license a:hover {
-  color: var(--c-accent);
+  color: var(--c-accent-dark);
 }
 
 /* ============================================================
@@ -677,15 +677,88 @@ a.btn.wordmark:hover .wordmark-last {
   font-family: var(--f-heading);
   font-weight: 600;
   font-size: 0.88rem;
-  color: var(--c-accent);
+  color: var(--c-accent-dark);
   text-decoration: none;
-  border: 1.5px solid var(--c-accent);
+  border: 1.5px solid var(--c-accent-dark);
   border-radius: 999px;
   padding: 0.4em 1.2em;
   transition: background-color 0.18s, color 0.18s;
 }
 
 .site-hero__link:hover {
-  background-color: var(--c-accent);
+  background-color: var(--c-accent-dark);
   color: #fff;
+}
+
+/* ============================================================
+   Skip link (keyboard navigation)
+   Hidden off-screen; revealed when focused by keyboard
+   ============================================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5em 1em;
+  background: var(--c-heading);
+  color: #fff;
+  font-family: var(--f-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================================================
+   Focus-visible — keyboard-only focus ring
+   Suppressed for mouse clicks; shown for Tab/keyboard nav
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--c-accent-dark);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================================
+   Reduced-motion — respect user preference
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  section.social-icons a:hover {
+    transform: none;
+  }
+
+  .gallery-item--bio::after {
+    transition: none;
+  }
+}
+
+/* ============================================================
+   Gallery noscript message
+   ============================================================ */
+.gallery-noscript {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--c-body);
+  font-size: 0.95rem;
 }
