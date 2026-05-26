@@ -6,8 +6,6 @@ params:
   theme: light
 resources:
   - src: CS_Functions.png
-    title: 
-  - src: CS_Functions.png
     title: Image showing how a general function in R looks like (a function has arguments, a function statement, and usually a return function). Good practices when writing functions are such as 1) use meaningful names for your functions, 2) make your function short and simple - each function should do one thing at a time, 3) use an explicit return statement, and 4) writing assertions, warnings and stops is helpful
   - src: CS_Package.png
     title: A summary reiterating the basic structure in package development (DESCRIPTION, NAMESPACE, R/, man/, and tests/) as well as helpful packages (devtools, use this, roxygen2, testthat, xpectr, cover, goodpractice, inteRgrate).

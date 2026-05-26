@@ -1,0 +1,82 @@
+{{ define "main" }}
+  {{ partial "title.html" . }}
+
+  <div class="bio-intro">
+    <p>Illustrated portraits celebrating the women who shaped — and keep shaping — programming, statistics, and STEM. Each portrait comes with a short biography, shared via the <a href="https://cosimameyer.github.io/community-bots/" target="_blank" rel="noopener">community bots on Mastodon and Bluesky</a>.</p>
+    <p class="bio-follow"><a href="https://cosimameyer.github.io/community-bots/" target="_blank" rel="noopener">Follow the series →</a></p>
+  </div>
+
+  {{- /* A–Z jump nav */ -}}
+  {{- $alphabet := slice "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" -}}
+  {{- $availLetters := slice -}}
+  {{- range .Pages -}}
+    {{- $letter := upper (substr .Params.name 0 1) -}}
+    {{- if not (in $availLetters $letter) -}}
+      {{- $availLetters = $availLetters | append $letter -}}
+    {{- end -}}
+  {{- end -}}
+  <nav class="az-nav" aria-label="Jump to portrait by first letter">
+    {{- range $alphabet -}}
+      {{- if in $availLetters . -}}
+        <a href="#portrait-{{ lower . }}">{{ . }}</a>
+      {{- else -}}
+        <span aria-hidden="true">{{ . }}</span>
+      {{- end -}}
+    {{- end -}}
+  </nav>
+
+  <section class="gallery">
+    <div id="gallery" style="visibility: hidden; height: 1px; overflow: hidden">
+      {{- $seenLetters := newScratch -}}
+      {{- range sort .Pages ".Params.name" "asc" -}}
+        {{- $page := . -}}
+        {{- $image := .Resources.GetMatch "*.png" -}}
+        {{- if $image -}}
+          {{ $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+          {{- $pswpSrc := "" -}}
+          {{- $pswpW := 0 -}}
+          {{- $pswpH := 0 -}}
+          {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) -}}
+          {{- $pswpSrc = $full.RelPermalink -}}
+          {{- $pswpW = $full.Width -}}
+          {{- $pswpH = $full.Height -}}
+          {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
+          {{- $altText := $page.Params.alt | default (printf "Illustration of %s" $page.Params.name) -}}
+          {{- $letter := lower (upper (substr $page.Params.name 0 1)) -}}
+          {{- $anchorId := "" -}}
+          {{- if not ($seenLetters.Get $letter) -}}
+            {{- $seenLetters.Set $letter true -}}
+            {{- $anchorId = $letter -}}
+          {{- end -}}
+          <a class="gallery-item gallery-item--bio"{{ if $anchorId }} id="portrait-{{ $anchorId }}" data-letter="{{ upper $letter }}"{{ end }} href="{{ $image.RelPermalink }}" data-pswp-src="{{ $pswpSrc }}" data-pswp-width="{{ $pswpW }}" data-pswp-height="{{ $pswpH }}" data-pswp-target="{{ $image.Name | urlize }}" data-overlay-name="{{ $page.Params.name }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
+            <figure style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
+              <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ $altText }}" />
+            </figure>
+            <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
+            {{ with site.Params.Author }}
+              <span itemprop="creator" itemtype="https://schema.org/Person" itemscope>
+                <meta itemprop="name" content="{{ site.Params.Author.name }}" />
+              </span>
+            {{ end }}
+          </a>
+          {{- if $page.Params.bio_gallery -}}
+            <template class="pswp-caption-content">
+              <strong class="caption-name">{{ $page.Params.name | safeHTML }}</strong>
+              <ul class="caption-bullets">
+                {{- range split $page.Params.bio_gallery "\n" -}}
+                  {{- $line := trim . " \t\r\n" | strings.TrimPrefix "✨ " | strings.TrimPrefix "✨" -}}
+                  {{- if $line -}}
+                    <li>{{ $line | markdownify }}</li>
+                  {{- end -}}
+                {{- end -}}
+              </ul>
+            </template>
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    </div>
+    <noscript>
+      <p class="gallery-noscript">JavaScript is required to display the gallery. Please enable it in your browser settings to view the portraits.</p>
+    </noscript>
+  </section>
+{{ end }}

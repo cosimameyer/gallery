@@ -89,11 +89,17 @@
       {{- end -}}
       {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
       {{- if $.Params.womenBio -}}
-        {{- $altText := .Title -}}
-        {{- $nameParts := split .Title "<br><br>" -}}
-        {{- if gt (len $nameParts) 1 -}}
-          {{- $altText = printf "Illustration of %s" (index $nameParts 0) -}}
+        {{- /* Use params.alt when set; fall back to name-derived description */ -}}
+        {{- $altText := .Params.alt | default "" -}}
+        {{- if eq $altText "" -}}
+          {{- $nameParts := split .Title "<br><br>" -}}
+          {{- if gt (len $nameParts) 1 -}}
+            {{- $altText = printf "Illustration of %s" (index $nameParts 0) -}}
+          {{- else -}}
+            {{- $altText = .Title -}}
+          {{- end -}}
         {{- end -}}
+        {{- $nameParts := split .Title "<br><br>" -}}
         {{- /* First portrait of each letter gets an id for the A–Z jump nav */ -}}
         {{- $firstName := trim (index $nameParts 0) " " -}}
         {{- $letter := lower (upper (substr $firstName 0 1)) -}}
@@ -132,7 +138,7 @@
       {{- else -}}
         <a class="gallery-item" href="{{ $image.RelPermalink }}" data-pswp-src="{{ $pswpSrc }}" data-pswp-width="{{ $pswpW }}" data-pswp-height="{{ $pswpH }}" data-pswp-target="{{ $image.Name | urlize }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
           <figure style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
-            <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
+            <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ .Params.alt | default .Title }}" />
           </figure>
           <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
           {{ with site.Params.Author }}
