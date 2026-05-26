@@ -1,0 +1,18 @@
+<footer>
+  <section class="footer-cta">
+    <a href="https://cosimameyer.com" target="_blank" rel="noopener" class="footer-home-link">
+      Visit cosimameyer.com&thinsp;→
+    </a>
+  </section>
+  {{ partialCached "social-icons.html" . }}
+  <section class="footer-meta">
+    <span>{{ .Site.Copyright }}</span>
+    <span class="footer-license">
+      Illustrations licensed under
+      <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC&nbsp;BY&nbsp;4.0</a>
+    </span>
+    {{ range .Site.Menus.footer }}
+      <a {{ with .Params.rel -}}rel="{{ . }}"{{ end -}} href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </section>
+</footer>
