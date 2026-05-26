@@ -68,21 +68,23 @@ body > menu a[aria-current="true"] { color: var(--c-accent); }
 
 /* ---- Category filter pills ---- */
 nav.categories li > a {
-  border-color: var(--c-border);
-  color: var(--c-body);
+  /* Filled by default — soft accent tint with strong text */
+  background-color: color-mix(in srgb, var(--c-accent) 10%, #fff);
+  border-color: color-mix(in srgb, var(--c-accent) 35%, transparent);
+  color: var(--c-accent-dark);
   font-family: var(--f-heading);
-  font-weight: 500;
+  font-weight: 600;
   transition: border-color 0.18s, color 0.18s, background-color 0.18s;
 }
 nav.categories li > a:hover {
+  background-color: color-mix(in srgb, var(--c-accent) 20%, #fff);
   border-color: var(--c-accent);
-  color: #fff;
-  background-color: var(--c-accent);
+  color: var(--c-accent-dark);
 }
 nav.categories li > a[aria-current="true"] {
+  background-color: var(--c-accent);
   border-color: var(--c-accent);
   color: #fff;
-  background-color: var(--c-accent);
 }
 
 /* ---- Page title / hgroup ---- */
