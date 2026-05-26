@@ -1,11 +1,6 @@
 {{ define "main" }}
   {{ partial "title.html" . }}
 
-  <div class="bio-intro">
-    <p>Illustrated portraits celebrating the women who shaped — and keep shaping — programming, statistics, and STEM. Each portrait comes with a short biography, shared via the <a href="https://cosimameyer.github.io/community-bots/" target="_blank" rel="noopener">community bots on Mastodon and Bluesky</a>.</p>
-    <p class="bio-follow"><a href="https://cosimameyer.github.io/community-bots/" target="_blank" rel="noopener">Follow the series →</a></p>
-  </div>
-
   {{- /* A–Z jump nav */ -}}
   {{- $alphabet := slice "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" -}}
   {{- $availLetters := slice -}}
