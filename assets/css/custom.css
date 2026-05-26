@@ -560,7 +560,7 @@ a.btn.wordmark {
 }
 
 .wordmark-first {
-  color: var(--c-accent-dark);
+  color: var(--c-accent);
 }
 
 .wordmark-last {
