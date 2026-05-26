@@ -619,12 +619,21 @@ a.btn.wordmark:hover .wordmark-last {
    ============================================================ */
 .site-hero {
   text-align: center;
-  padding: 3.5rem 1.5rem 3rem;
+  /* Pull up to cancel header's margin-bottom (2rem mobile, 3rem ≥640px) */
+  margin-top: -2rem;
+  padding: calc(3.5rem + 2rem) 1.5rem 3rem;
   background: linear-gradient(
     180deg,
     color-mix(in srgb, var(--c-accent) 16%, var(--c-bg)) 0%,
     var(--c-bg) 100%
   );
+}
+
+@media (min-width: 640px) {
+  .site-hero {
+    margin-top: -3rem;
+    padding-top: calc(3.5rem + 3rem);
+  }
 }
 
 .site-hero__tagline {
