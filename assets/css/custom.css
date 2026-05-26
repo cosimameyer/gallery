@@ -447,6 +447,21 @@ section.featured {
 }
 
 /* ============================================================
+   Portrait gallery — extra breathing room on the sides
+   ============================================================ */
+section.gallery {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 640px) {
+  section.gallery {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* ============================================================
    Album cards — muted text for description excerpt
    ============================================================ */
 .card > div > p {
