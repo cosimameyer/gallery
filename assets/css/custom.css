@@ -613,3 +613,45 @@ a.btn.wordmark:hover .wordmark-last {
 .footer-license a:hover {
   color: var(--c-accent);
 }
+
+/* ============================================================
+   Home — hero strip
+   ============================================================ */
+.site-hero {
+  text-align: center;
+  padding: 3.5rem 1.5rem 3rem;
+  background: radial-gradient(
+    ellipse 100% 140% at 50% -10%,
+    color-mix(in srgb, var(--c-accent) 14%, var(--c-bg)) 0%,
+    var(--c-bg) 68%
+  );
+}
+
+.site-hero__tagline {
+  font-family: var(--f-heading);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 600;
+  color: var(--c-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin: 0 auto 1.5rem;
+  max-width: 520px;
+}
+
+.site-hero__link {
+  display: inline-block;
+  font-family: var(--f-heading);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--c-accent);
+  text-decoration: none;
+  border: 1.5px solid var(--c-accent);
+  border-radius: 999px;
+  padding: 0.4em 1.2em;
+  transition: background-color 0.18s, color 0.18s;
+}
+
+.site-hero__link:hover {
+  background-color: var(--c-accent);
+  color: #fff;
+}
