@@ -190,6 +190,16 @@ body > footer section:last-of-type a:hover { color: var(--c-accent); }
 }
 
 /* ============================================================
+   A–Z anchor scroll offset
+   The id is on the first portrait of each letter, but the heading
+   floats 78px above it (PAD_TOP 24 + HEAD_H 40 + PAD_BOT 14) and
+   the sticky header adds ~4rem. scroll-margin-top keeps both visible.
+   ============================================================ */
+[id^="portrait-"] {
+  scroll-margin-top: calc(4rem + 80px);
+}
+
+/* ============================================================
    Portrait hover — name overlay
    ============================================================ */
 .gallery-item--bio {
